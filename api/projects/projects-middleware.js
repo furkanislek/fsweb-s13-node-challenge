@@ -35,7 +35,7 @@ function validateProjects(req, res, next) {
 
     if (!name || !description) {
       res.status(400).json({
-        message: "gerekli name alanı eksik",
+        message: "gerekli alanlar eksik",
       });
     } else {
       req.name = name;

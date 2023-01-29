@@ -1,15 +1,6 @@
 // projects ara yazılımları buraya
 const Projects = require("../projects/projects-model");
 
-function logger(req, res, next) {
-  const method = req.method;
-  const url = req.originalUrl;
-  const timestamp = new Date().toLocaleString();
-
-  console.log(`${timestamp} ${method} ${url}`);
-
-  next();
-}
 
 async function validateProjectWithId(req, res, next) {
   try {
@@ -50,7 +41,6 @@ function validateProjects(req, res, next) {
 }
 
 module.exports = {
-  logger,
   validateProjectWithId,
   validateProjects,
 };

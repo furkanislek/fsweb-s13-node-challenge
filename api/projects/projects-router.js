@@ -1,7 +1,6 @@
 // "project" routerını buraya yazın!
 const express = require("express");
 const {
-  logger,
   validateProjectWithId,
   validateProjects,
 } = require("../projects/projects-middleware");

@@ -1,6 +1,5 @@
 const express = require("express");
 const {
-  logger,
   validateActionsWithId,
   validateActions,
 } = require("../actions/actions-middlware");

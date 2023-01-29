@@ -1,15 +1,6 @@
 // eylemlerle ilgili ara katman yazılımları yazın
 const Actions = require("../actions/actions-model");
 
-function logger(req, res, next) {
-  const method = req.method;
-  const url = req.originalUrl;
-  const timestamp = new Date().toLocaleString();
-
-  console.log(`${timestamp} ${method} ${url}`);
-
-  next();
-}
 
 async function validateActionsWithId(req, res, next) {
   try {
@@ -55,7 +46,6 @@ function validateActions(req, res, next) {
 }
 
 module.exports = {
-  logger,
   validateActionsWithId,
   validateActions,
 };

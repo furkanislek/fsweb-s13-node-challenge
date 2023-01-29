@@ -4,6 +4,8 @@
     "main": "index.js",
     "scripts": {
         "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
+        "start": "node index.js",
+        "server": "nodemon index.js",
         "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
     },
     "repository": {
@@ -11,9 +13,11 @@
         "url": "git+https://github.com/Workintech/fsweb-s13-challenge"
     },
     "dependencies": {
-        "express": "4.18.1",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.1",
         "helmet": "5.0.2",
         "knex": "^2.4.1",
+        "nodemon": "^2.0.20",
         "sqlite3": "5.0.8"
     },
     "devDependencies": {
